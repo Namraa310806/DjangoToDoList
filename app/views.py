@@ -6,7 +6,7 @@ def home(request):
     return render(request,'index.html')
 
 def blog(request):
-    return render(request,'blog.html')
+    return render(request,'bloghome.html')
 
 def contact(request):
     return render(request,'contact.html')
@@ -14,3 +14,6 @@ def contact(request):
 
 def blogpost(request,slug):
     return HttpResponse(f"you are viweing {slug}")
+
+def search(request):
+    return render(request,'search.html')
