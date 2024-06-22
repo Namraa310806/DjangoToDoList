@@ -15,7 +15,8 @@ def contact(request):
 
 
 def blogpost(request,slug):
-    return HttpResponse(f"you are viweing {slug}")
+    blog= Blog.objects.filter(slug=slug).first()
+    return render(request,'blogpost.html',{'blog': blog})
 
 def search(request):
     return render(request,'search.html')
